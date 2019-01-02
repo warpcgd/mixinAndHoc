@@ -40,10 +40,10 @@ export default {
   },
   methods: {
     mixinClick () {
-      console.log('yyyyy')
+      console.log('mixinClick')
     },
     HOCclick () {
-      console.log('yyyyy')
+      console.log('HOCclick')
     }
   }
 }

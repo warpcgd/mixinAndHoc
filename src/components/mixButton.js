@@ -24,7 +24,7 @@ export default {
   methods: {
     handleClickLink (event) {
       let that = this
-      console.log('2222')
+      console.log('debounce')
       debounce(_handleClickLink, 300, that, event)
     }
   }

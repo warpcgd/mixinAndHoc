@@ -17,17 +17,25 @@ export default {
   methods: {
     handleClickLink (event) {
       let that = this
+      console.log('debounce')
       debounce(that.$listeners.click, 300, that, event)
     }
   },
   render (h) {
-    console.log(this)
+    const slots = Object.keys(this.$slots)
+      .reduce((arr, key) => arr.concat(this.$slots[key]), [])
+      .map(vnode => {
+        vnode.context = this._self
+        return vnode
+      })
     return h('Button', {
       on: {
         click: this.handleClickLink
       },
-      attrs: this.$attrs,
-      props: this.$props
-    }, this.$slot) // eslint-disable-line
+      props: this.$props,
+      // 透传 scopedSlots
+      scopedSlots: this.$scopedSlots,
+      attrs: this.$attrs
+    }, slots)
   }
 }
