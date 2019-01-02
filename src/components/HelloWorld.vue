@@ -2,7 +2,7 @@
   <div>
     <h1>1.mixButton</h1>
     <div style="width:70%;margin:0 auto">
-       <mixButton @click="mixinClick">dddd</mixButton>
+       <mixButton @click="mixinClick">mixButton</mixButton>
     </div>
     <br>
     <br>
@@ -10,7 +10,7 @@
     <br>
     <h1>2.HocButton</h1>
     <div style="width:70%;margin:0 auto">
-       <HocButton @click="HOCclick">dddd</HocButton>
+       <HocButton @click="HOCclick">HocButton</HocButton>
     </div>
   </div>
 </template>
