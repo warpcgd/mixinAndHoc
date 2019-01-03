@@ -28,6 +28,7 @@ export default {
         vnode.context = this._self
         return vnode
       })
+    console.log('$attrs', this.$attrs)
     return h('Button', {
       on: {
         click: this.handleClickLink

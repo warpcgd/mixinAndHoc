@@ -10,7 +10,7 @@
     <br>
     <h1>2.HocButton</h1>
     <div style="width:70%;margin:0 auto">
-       <HocButton @click="HOCclick">HocButton</HocButton>
+       <HocButton title="test" @click="HOCclick">HocButton</HocButton>
     </div>
   </div>
 </template>
